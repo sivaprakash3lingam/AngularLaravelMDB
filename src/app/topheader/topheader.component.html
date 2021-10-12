@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary py-0">
+	<div class="container-fluid">
+		<a class="navbar-brand fw-normal fs-3 py-0" href="#">Integrass</a>
+		<button class="navbar-toggler" type="button" (click)="basicNavbar.toggle()" aria-expanded="false"
+			aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+		<div class="collapse navbar-collapse " id="navbarSupportedContent" mdbCollapse #basicNavbar="mdbCollapse">
+			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				<div mdbDropdown class="dropdown nav-item">
+					<a class="nav-link dropdown-toggle" type="button" aria-expanded="false" mdbDropdownToggle>Signin</a>
+					<ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<li><a href="#" [routerLink]="['/user/login']" class="dropdown-item">User Login</a></li>
+						<li><a href="#" [routerLink]="['/admin/login']" class="dropdown-item">Administartor Login</a>
+						</li>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,20 @@
+<header class="sticky-top bg-primary d-print-none">
+	<section class="container-fluid">
+		<nav class="navbar text-white navbar-dark py-0 shadow-0">
+			<button type="button" id="sidebarCollapse" class="navbar-toggler" (click)="ClickSideNav.emit(this)"><i
+					class="fa fa-bars"></i><span class="sr-only">Toggle Menu</span></button>
+			<a class="navbar-brand fw-bold fs-4" href="#">INTEGRASS</a>
+			<ul class="navbar-nav ml-auto nav-flex-icons">
+				<li class="nav-item dropdown" mdbDropdown>
+					<a class="nav-link dropdown-toggle" mdbDropdownToggle><i class="fas fa-user-tie fa-2x pe-4"></i>
+					</a>
+					<ul mdbDropdownMenu class="dropdown-menu">
+						<li><a href="#" [routerLink]="['/admin/profile']" class="dropdown-item">My Profile</a></li>
+						<li><a href="#" [routerLink]="['/admin/signout']" class="dropdown-item">Signout</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</section>
+</header>

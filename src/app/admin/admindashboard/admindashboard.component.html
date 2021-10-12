@@ -1,0 +1,65 @@
+<app-admintopheader></app-admintopheader>
+<div class="wrapper">
+
+	<app-adminsidebar class="sidebar" (ClickSideNav)="sidenavtoggler($event)"></app-adminsidebar>
+
+	<div class="content">
+
+		<section class="grey lighten-4 py-2 d-print-none">
+			<div class="container-fluid">
+				<a href="" class="btn btn-primary fw-bold p-1 float-end"><i class="fas fa-plus"></i> Add Event</a>
+				<h1 class="h5 font-weight-bold mb-0">List of Events</h1>
+			</div>
+		</section>
+
+		<section class="py-3">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-2 col-md-3">
+						<mdb-form-control class="mb-3">
+							<input mdbInput type="text" name="from" id="from" class="form-control" bsDatepicker
+								[bsConfig]="{ isAnimated: true, dateInputFormat:'YYYY-MM-DD', containerClass: 'theme-default' }" />
+							<label mdbLabel class="form-label">Start Date</label>
+						</mdb-form-control>
+					</div>
+					<div class="col-lg-2 col-md-3">
+						<mdb-form-control class="mb-3">
+							<input mdbInput type="text" name="to" id="to" class="form-control" bsDatepicker
+								[bsConfig]="{ isAnimated: true, dateInputFormat:'YYYY-MM-DD', containerClass: 'theme-default' }" />
+							<label mdbLabel class="form-label">End Date</label>
+						</mdb-form-control>
+					</div>
+					<div class="col-lg-8 col-md-6">
+						<mdb-form-control class="mb-3">
+							<input mdbInput type="text" name="title" id="title" class="form-control" />
+							<label mdbLabel class="form-label">Title</label>
+						</mdb-form-control>
+					</div>
+					<div class="col-md-4">
+						<select name="privacy" id="privacy" class="form-select mb-3">
+							<option value="">All Event Types</option>
+							<option value="Public">Public</option>
+							<option value="Private">Private</option>
+						</select>
+					</div>
+					<div class="col-md-4">
+						<select name="status" id="status" class="form-select mb-3">
+							<option value="">All Status</option>
+							<option value="Pending">Pending</option>
+							<option value="Approved">Approved</option>
+							<option value="Rejected">Rejected</option>
+							<option value="Deleted">Deleted</option>
+						</select>
+					</div>
+					<div class="col-md-4"><button type="button" class="btn btn-primary w-100 mb-3"
+							id="btn_filter">Filter</button></div>
+				</div>
+				<div class="table-responsive">
+					<table class="table table-bordered table-sm" id="eventlist">
+						<thead class="table-active"></thead>
+					</table>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
